@@ -36,7 +36,6 @@ let pkgs = nixpkgs {
 pkgs.stdenv.mkDerivation {
   buildPhase = ''
     ${pkgs.pub2nix.install { projectPath = ./.; }}
-    ...
   '';
 }
 ```
