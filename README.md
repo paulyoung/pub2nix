@@ -32,13 +32,11 @@ let pkgs = nixpkgs {
     (import ./nix/overlays/pub2nix.nix)
   ];
 }; in
-...
+
 pkgs.stdenv.mkDerivation {
-  ...
   buildPhase = ''
     ${pkgs.pub2nix.install { projectPath = ./.; }}
     ...
   '';
-  ...
 }
 ```
