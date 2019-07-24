@@ -19,7 +19,7 @@ let nixPrefetchUrlCmd = ''
 pkgs.mkShell {
   name = "pub2nix-generate";
   src = lib.sourceByRegex ./. [
-    "^pubspec.lock"
+    "^pubspec.lock$"
     "^pubspec.yaml$"
   ];
   buildInputs = [
