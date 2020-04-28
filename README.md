@@ -33,7 +33,7 @@ $ nix-build
 
 ## How it works
 
-We aim to build pub packages with nix using only information found in `pubspec.lock`. However, [`pubspec.lock` doesn't yet contain sha256 checksums](https://github.com/dart-lang/pub/issues/2462), and Nix needs those in order to build each package.
+We aim to build pub packages with Nix using only information found in `pubspec.lock`. However, [`pubspec.lock` doesn't yet contain sha256 checksums](https://github.com/dart-lang/pub/issues/2462), and Nix needs those in order to build each package.
 
 As a stop-gap, we require users to generate a `pub2nix.lock` file which is a copy of `pubspec.lock` with an additional `sha256` field for each package. We don't patch `pubspec.lock` directly since convenient YAML tooling changes the format in ways which Dart tooling complains about, e.g. failing to parse the Dart SDK version, as well as producing noisy diffs.
 
