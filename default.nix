@@ -2,7 +2,10 @@ self: super:
 
 {
   pub2nix = {
-    generate = import ./generate.nix { inherit (self) pkgs; };
-    install = import ./install.nix { inherit (self) pkgs; };
+    build = {
+      native = import ./build/native.nix { inherit (self) pkgs; };
+      package = import ./build/package.nix { inherit (self) pkgs; };
+    };
+    lock = import ./lock.nix { inherit (self) pkgs; };
   };
 }
