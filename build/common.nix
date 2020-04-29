@@ -122,7 +122,7 @@ in
       export PUB_CACHE=.pub-cache
     '';
     pubGet = ''
-      ${pkgs.dart}/bin/pub get --no-precompile --offline
+      pub get --no-precompile --offline
     '';
     dartAnalyzer = ''
       dartanalyzer .
