@@ -87,9 +87,7 @@ let
 
       synthesize = builtins.foldl' step "" packages;
     in
-      pkgs.runCommand "${specFile.name}_pub-cache" {} ''
-        ${synthesize}
-      '';
+      pkgs.runCommand "${specFile.name}_pub-cache" {} synthesize;
 in
   pkgs.stdenv.mkDerivation {
     name = specFile.name;
