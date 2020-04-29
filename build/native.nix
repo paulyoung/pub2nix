@@ -8,6 +8,6 @@ in
     name = oldAttrs.name + "-native";
     installPhase = ''
       mkdir -p $out/bin
-      dart2native bin/main.dart -o $out/bin/pub2nix_simple_example
+      dart2native bin/main.dart -o $out/bin/${oldAttrs.name}
     '';
   })
