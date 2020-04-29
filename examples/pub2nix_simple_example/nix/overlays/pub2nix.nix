@@ -5,8 +5,8 @@ import ../../../..
 # let
 #   owner = "paulyoung";
 #   repo = "pub2nix";
-#   rev = "bfa2c2638728f8e62eb04d31bbd2e9100768d1ea";
-#   sha256 = "0nsn85gwywis9w1fwmml394wh6dldznb3fq5ym7a3lvvc4cg32nz";
+#   rev = "3493d89c189713472cbe40bcc8e9a2653775c6ca";
+#   sha256 = "0y6mgjg37gn932m5abim3y0shkmp8yx4rn4wc4a2h439dkd9gfkq";
 # in
 #   import (builtins.fetchTarball {
 #     inherit sha256;
