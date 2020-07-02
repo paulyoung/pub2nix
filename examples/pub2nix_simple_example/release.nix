@@ -4,6 +4,7 @@ let
   };
 
   default = pkgs.pub2nix.build.native {
+    binName = "pub2nix-simple-example"; # The desired executable name
     src = ./.;
   };
 
